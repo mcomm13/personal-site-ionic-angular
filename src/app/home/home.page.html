@@ -1,9 +1,35 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-title>About Me</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card class="card__intro">
+    <div class="headshot-container"><img class="img__headshot" src="/assets/images/mcomm_headshot.jpg" /></div>
 
+    <ion-card-header>
+      <ion-card-title class="ion-text-center"> Michael Commendatore </ion-card-title>
+    </ion-card-header>
+    <ion-card-content
+      ><p>
+        Hi everyone. My name is Michael Commendatore. I'm a professional software developer based out of Connecticut. I started my career as a
+        developer while working for an online entertainment ticket exchange company, and currently I work for a Fortune 500 insurance company. Aside
+        from programming, I enjoy playing the guitar, golfing, video games, and spending time with friends and family. I created this site as a
+        personal project where I can showcase some of my work, experiences, and creative endeavors.
+      </p>
+      <div class="social-section ion-text-center">
+        <a [href]="contactInfo.facebook" target="_blank"><ion-icon name="logo-facebook" color="secondary"></ion-icon></a>
+        <a [href]="contactInfo.github" target="_blank">
+          <ion-icon name="logo-github" color="secondary"></ion-icon>
+        </a>
+        <a [href]="contactInfo.linkedin" target="_blank"><ion-icon name="logo-linkedin" color="secondary"></ion-icon></a>
+        <a href="mailto:{{ contactInfo.email }}"><ion-icon name="mail" color="secondary"></ion-icon></a>
+        <a [href]="contactInfo.twitter" target="_blank"><ion-icon name="logo-twitter" color="secondary"></ion-icon></a>
+        <a [href]="contactInfo.youtube" target="_blank">
+          <ion-icon name="logo-youtube" color="secondary"></ion-icon>
+        </a>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

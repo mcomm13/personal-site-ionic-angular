@@ -1,0 +1,28 @@
+.headshot-container {
+  text-align: center;
+}
+
+.img {
+  &__headshot {
+    width: 240px;
+    height: 240px;
+    border-radius: 25%;
+    border: 4px solid var(--ion-color-medium);
+  }
+}
+
+.card {
+  &__intro {
+    padding: 20px;
+  }
+}
+
+.social-section {
+  margin-top: 9px;
+  ion-icon {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    cursor: pointer;
+  }
+}
