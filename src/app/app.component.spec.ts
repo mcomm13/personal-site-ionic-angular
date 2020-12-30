@@ -59,9 +59,13 @@ describe('AppComponent', () => {
     await fixture.detectChanges();
     const app = fixture.nativeElement;
     const menuItems = app.querySelectorAll('ion-item');
-    expect(menuItems.length).toEqual(12);
-    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/folder/Inbox');
-    expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/folder/Outbox');
+    expect(menuItems.length).toEqual(6);
+    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/Home');
+    expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/Web Apps');
+    expect(menuItems[2].getAttribute('ng-reflect-router-link')).toEqual('/Mobile Apps');
+    expect(menuItems[3].getAttribute('ng-reflect-router-link')).toEqual('/Music');
+    expect(menuItems[4].getAttribute('ng-reflect-router-link')).toEqual('/Blog');
+    expect(menuItems[5].getAttribute('ng-reflect-router-link')).toEqual('/Resume');
   });
 
 });
