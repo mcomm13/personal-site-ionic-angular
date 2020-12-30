@@ -4,6 +4,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  These are the mobile apps that I have created and published to the app stores. Enjoy!
 
+  <ion-card *ngFor="let app of mobileApps" [hidden]="app.status !== 'Active'">
+    <ion-card-header>
+      <ion-card-title>{{ app.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div><img class="app-icon" [src]="app.icon" /></div>
+      <p>{{ app.pitch }}</p>
+      <ion-button color="dark" (click)="goToAppStore(app.iosUrl)"> <ion-icon name="logo-apple"></ion-icon>Download for iOS</ion-button>
+      <ion-button color="dark" (click)="goToAppStore(app.androidUrl)"> <ion-icon name="logo-android"></ion-icon>Download for Android</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
