@@ -4,6 +4,76 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-padding">
+  <div>
+    <h1>Michael Commendatore</h1>
+    <div>
+      <p>
+        <ion-icon name="mail"></ion-icon><a class="contact-link" href="mailto:michael.commendatore@outlook.com">michael.commendatore@outlook.com</a>
+      </p>
+      <p>
+        <ion-icon name="call"></ion-icon>
+        <a class="contact-link" href="tel:2039102322">203-910-2322</a>
+      </p>
+    </div>
+    <div>
+      <p>Creative, self-driven software developer looking for an opportunity to build exciting new solutions using modern web technologies.</p>
+    </div>
+  </div>
+  <ion-card>
+    <ion-card-header> <ion-card-title>Skills</ion-card-title> </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-sm="6" *ngFor="let skill of resumeData.skills"> {{ skill }} </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Work Experience</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngFor="let job of resumeData.jobs">
+        <p>
+          <strong>{{ job.company }}</strong>
+        </p>
+        <p>Role: {{ job.role }}</p>
+        <p>{{ job.dates }}</p>
+        <p>Responsibilities:</p>
+        <ul>
+          <li *ngFor="let responsibility of job.responsibilities">{{ responsibility }}</li>
+        </ul>
+        <p>Accomplishments:</p>
+        <ul>
+          <li *ngFor="let highlight of job.highlights">{{ highlight }}</li>
+        </ul>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Personal Projects and Accomplishments </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div>
+        <ul>
+          <li *ngFor="let other of resumeData.otherAccomplishments">{{ other }}</li>
+        </ul>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Education </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="education-item" *ngFor="let edu of resumeData.education">
+        <p class="education-item__school">{{ edu.school }}</p>
+        <p>Class of {{ edu.yearGraduated }}</p>
+        <p class="education-item__degree">{{ edu.degree }}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

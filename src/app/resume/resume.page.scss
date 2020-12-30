@@ -1,0 +1,16 @@
+.contact-link {
+  padding-left: 4px;
+}
+
+.education-item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__school {
+    font-size: 12pt;
+    font-weight: bold;
+  }
+  &__degree {
+    font-style: italic;
+  }
+}
