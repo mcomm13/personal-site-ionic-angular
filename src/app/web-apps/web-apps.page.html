@@ -4,6 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  These are a few of the web apps that I have created and published to Firebase.
 
+  <ion-card *ngFor="let app of webApps">
+    <ion-card-header>
+      <ion-card-title>{{ app.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ app.description }}</p>
+      <p><a [href]="app.url" target="_blank">{{app.url}}</a></p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
