@@ -4,6 +4,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding" *ngIf="!blogData">
+  <ion-spinner color="warning"></ion-spinner>
+</ion-content>
 
+<ion-content class="ion-padding" *ngIf="blogData">
+  <ion-card *ngFor="let blog of blogData">
+    <ion-card-header>
+      <ion-card-title><a [routerLink]="['/blog', blog.title]">{{ blog.title }}</a></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div>Written on {{ blog.date | date: 'mediumDate' }} by {{ blog.author }}</div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
