@@ -4,6 +4,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding" *ngIf="!blog">
+  <ion-spinner color="primary"></ion-spinner>
+</ion-content>
 
+<ion-content class="ion-padding" *ngIf="blog">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ blog.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div><strong>Author: </strong>{{ blog.author }}</div>
+      <div><strong>Date: </strong>{{ blog.date | date: 'mediumDate' }}</div>
+      <div class="blog-content" [innerHtml]="blog.content"></div>
+      <div *ngIf="blog.sanitizedUrl" class="blog-content">
+        <iframe
+          width="560"
+          height="315"
+          [src]="blog.sanitizedUrl"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

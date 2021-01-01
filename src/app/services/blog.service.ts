@@ -8,12 +8,15 @@ export class BlogService {
   constructor(private http: HttpClient) {}
 
   getAllBlogPosts(): Promise<any> {
-    return this.http
-      .get('https://mcomm-ts-express-api.azurewebsites.net/api/blogs')
-      .toPromise()
-      .then((blogs: any) => {
-        return blogs && blogs.data;
-      });
+    return (
+      this.http
+        .get('https://mcomm-ts-express-api.azurewebsites.net/api/blogs')
+        // .get('http://localhost:4200/api/blogs')
+        .toPromise()
+        .then((blogs: any) => {
+          return blogs && blogs.data;
+        })
+    );
   }
 
   sortBlogsByDate(blogs): any[] {

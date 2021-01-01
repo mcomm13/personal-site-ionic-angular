@@ -5,42 +5,40 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
   },
   {
     path: 'web-apps',
-    loadChildren: () => import('./web-apps/web-apps.module').then( m => m.WebAppsPageModule)
+    loadChildren: () => import('./web-apps/web-apps.module').then(m => m.WebAppsPageModule),
   },
   {
     path: 'mobile-apps',
-    loadChildren: () => import('./mobile-apps/mobile-apps.module').then( m => m.MobileAppsPageModule)
+    loadChildren: () => import('./mobile-apps/mobile-apps.module').then(m => m.MobileAppsPageModule),
   },
   {
     path: 'resume',
-    loadChildren: () => import('./resume/resume.module').then( m => m.ResumePageModule)
+    loadChildren: () => import('./resume/resume.module').then(m => m.ResumePageModule),
   },
   {
     path: 'blog',
-    loadChildren: () => import('./blog/blog.module').then( m => m.BlogPageModule)
+    loadChildren: () => import('./blog/blog.module').then(m => m.BlogPageModule),
   },
   {
-    path: 'blog-detail/:id',
-    loadChildren: () => import('./blog-detail/blog-detail.module').then( m => m.BlogDetailPageModule)
+    path: 'blog/:title',
+    loadChildren: () => import('./blog-detail/blog-detail.module').then(m => m.BlogDetailPageModule),
   },
   {
     path: 'music',
-    loadChildren: () => import('./music/music.module').then( m => m.MusicPageModule)
-  }
+    loadChildren: () => import('./music/music.module').then(m => m.MusicPageModule),
+  },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
