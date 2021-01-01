@@ -11,7 +11,7 @@ export class MusicService {
     return (
       this.http
         // .get('https://mcomm-ts-express-api.azurewebsites.net/api/music')
-        .get('http://mcomm-web-api.azurewebsites.net/api/music')
+        .get('https://mcomm-web-api.azurewebsites.net/api/music')
         .toPromise()
         .then((songs: any) => {
           return songs && songs.data;
