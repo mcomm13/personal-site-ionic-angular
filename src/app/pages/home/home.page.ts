@@ -1,13 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface ContactInfo {
-  facebook: string;
-  twitter: string;
-  linkedin: string;
-  email: string;
-  github: string;
-  youtube: string;
-}
+import { ContactInfo } from '../../interfaces/contact-info';
 
 @Component({
   selector: 'app-home',

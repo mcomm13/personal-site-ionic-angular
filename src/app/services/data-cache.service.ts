@@ -1,11 +1,5 @@
 import { Injectable } from '@angular/core';
-
-interface BlogItem {
-  title: string;
-  date: string;
-  content: string;
-  author: string;
-}
+import { Blog } from '../interfaces/blog';
 
 interface Song {
   artist: string;
@@ -20,16 +14,16 @@ interface Song {
   providedIn: 'root',
 })
 export class DataCacheService {
-  cachedBlogData: BlogItem[];
+  cachedBlogData: Blog[];
   cachedMusicData: Song[];
 
   constructor() {}
 
-  cacheBlogData(data: BlogItem[]) {
+  cacheBlogData(data: Blog[]) {
     this.cachedBlogData = data;
   }
 
-  getCachedBlogData(): BlogItem[] {
+  getCachedBlogData(): Blog[] {
     return this.cachedBlogData || [];
   }
 

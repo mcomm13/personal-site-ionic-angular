@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { BlogService } from '../services/blog.service';
-import { DataCacheService } from '../services/data-cache.service';
+import { BlogService } from '../../services/blog.service';
+import { DataCacheService } from '../../services/data-cache.service';
+import { Blog } from '../../interfaces/blog';
 
 @Component({
   selector: 'app-blog-detail',
@@ -10,7 +11,7 @@ import { DataCacheService } from '../services/data-cache.service';
   styleUrls: ['./blog-detail.page.scss'],
 })
 export class BlogDetailPage implements OnInit {
-  blog: any;
+  blog: Blog;
   constructor(
     private blogService: BlogService,
     private dataCacheService: DataCacheService,

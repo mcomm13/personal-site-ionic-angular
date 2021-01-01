@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Music</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="!musicData">
+  <ion-spinner color="primary"></ion-spinner>
+</ion-content>
+
+<ion-content class="ion-padding" *ngIf="musicData">
+  <div class="page-intro">
+    <p>Before I learned how to code, my main creative outlet was music.</p>
+    <p>
+      I learned to play guitar when I was a teenager. While I was in high school, I started a rock band with a few of my friends. I developed a
+      preference for the bass guitar, and therefore took on the role of the bassist in the group.
+    </p>
+    <p>
+      We found it difficult to find a lead singer, so I decided to assume that role as well. It was mostly because I had a strong desire to write and
+      perform my own songs. My band carried on into my college years under a new name, but with mostly the same lineup.
+    </p>
+    <p>Here's a collection of some of my band's songs.</p>
+  </div>
+  <ion-card *ngFor="let song of musicData">
+    <ion-card-header>
+      <ion-card-title>{{ song.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div><strong>Year written:</strong> {{ song.year }}</div>
+      <div><strong>Band:</strong> {{ song.artist }}</div>
+      <div>{{ song.description }}</div>
+      <div>
+        <a [href]="song.url" target="_blank">Play on Google Drive</a>
+        <!--
+          <audio controls="controls" crossorigin="anonymous">
+            <source
+              src="https://drive.google.com/file/d/1dONPNloAz9xvg3axfcUFIbPBNp8H_BQ-/preview"
+            />
+          </audio>
+
+          <iframe
+            src="https://drive.google.com/file/d/1dONPNloAz9xvg3axfcUFIbPBNp8H_BQ-/view"
+          ></iframe>
+        -->
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <div class="music__credits">
+    Credit to Bryan Ash and Jay Spiwak for lead and rhythm guitars, drum programming, and backing vocals. <br />
+    Credit to Nick Forte for drums.<br />
+    Credit to Dennis Molen for lead guitar on "Gone".
+  </div>
+</ion-content>

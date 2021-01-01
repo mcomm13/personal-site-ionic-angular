@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogService } from '../services/blog.service';
-import { DataCacheService } from '../services/data-cache.service';
-
-interface Blog {
-  title: string;
-  date: string;
-  author: string;
-  content: string;
-}
+import { BlogService } from '../../services/blog.service';
+import { DataCacheService } from '../../services/data-cache.service';
+import { Blog } from '../../interfaces/blog';
 
 @Component({
   selector: 'app-blog',

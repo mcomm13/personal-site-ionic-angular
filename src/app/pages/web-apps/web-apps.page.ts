@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface WebApp {
-  name: string;
-  description: string;
-  url: string;
-}
+import { WebApp } from '../../interfaces/web-app';
 
 @Component({
   selector: 'app-web-apps',

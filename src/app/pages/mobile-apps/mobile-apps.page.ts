@@ -1,13 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface MobileApp {
-  name: string;
-  iosUrl: string;
-  androidUrl: string;
-  status: string;
-  pitch: string;
-  icon: string;
-}
+import { MobileApp } from '../../interfaces/mobile-app';
 
 @Component({
   selector: 'app-mobile-apps',
