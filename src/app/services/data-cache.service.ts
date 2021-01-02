@@ -1,14 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Blog } from '../interfaces/blog';
-
-interface Song {
-  artist: string;
-  date: string;
-  description: string;
-  title: string;
-  url: string;
-  year: string;
-}
+import { Song } from '../interfaces/song';
 
 @Injectable({
   providedIn: 'root',
