@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
@@ -15,40 +15,36 @@ export class AppComponent implements OnInit {
     {
       title: 'Home',
       url: '/home',
-      icon: 'home'
-    },
-    {
-      title: 'Web Apps',
-      url: '/web-apps',
-      icon: 'code-slash'
-    },
-    {
-      title: 'Mobile Apps',
-      url: '/mobile-apps',
-      icon: 'apps'
-    },
-    {
-      title: 'Music',
-      url: '/music',
-      icon: 'musical-notes'
+      icon: 'home',
     },
     {
       title: 'Blog',
       url: '/blog',
-      icon: 'newspaper'
+      icon: 'newspaper',
+    },
+    {
+      title: 'Web Apps',
+      url: '/web-apps',
+      icon: 'code-slash',
+    },
+    {
+      title: 'Mobile Apps',
+      url: '/mobile-apps',
+      icon: 'apps',
+    },
+    {
+      title: 'Music',
+      url: '/music',
+      icon: 'musical-notes',
     },
     {
       title: 'Resume',
       url: '/resume',
-      icon: 'laptop'
+      icon: 'laptop',
     },
   ];
 
-  constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
-  ) {
+  constructor(private platform: Platform, private splashScreen: SplashScreen, private statusBar: StatusBar) {
     this.initializeApp();
   }
 
@@ -59,6 +55,5 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
