@@ -8,14 +8,11 @@ export class MusicService {
   constructor(private http: HttpClient) {}
 
   getMyMusic(): Promise<any> {
-    return (
-      this.http
-        // .get('https://mcomm-ts-express-api.azurewebsites.net/api/music')
-        .get('https://mcomm-web-api.azurewebsites.net/api/music')
-        .toPromise()
-        .then((songs: any) => {
-          return songs && songs.data;
-        })
-    );
+    return this.http
+      .get('https://mcomm-ts-express-api.azurewebsites.net/api/music')
+      .toPromise()
+      .then((songs: any) => {
+        return songs && songs.data;
+      });
   }
 }
