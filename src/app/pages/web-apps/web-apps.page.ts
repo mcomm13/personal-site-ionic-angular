@@ -14,7 +14,7 @@ export class WebAppsPage implements OnInit {
     this.webApps = [
       {
         name: 'Leave To Chance',
-        description: `When you find yourself having to make a decision between multiple options, and you would prefer to just leave that decision to chance, this app is for you.  Simply enter in the number of possible options that you are choosing between, and this app will randomly pick an options for you.  Simple as that.`,
+        description: `When you find yourself having to make a decision between multiple options, and you would prefer to just leave that decision to chance, this app is for you.  Simply enter in the number of possible options that you are choosing between, and this app will randomly pick an option for you.`,
         url: 'https://leave-to-chance.firebaseapp.com',
       },
       {
