@@ -22,7 +22,7 @@
       <div class="blog-content" [innerHtml]="blog.content"></div>
       <div *ngIf="blog.sanitizedUrl" class="blog-content">
         <iframe
-          width="560"
+          width="100%"
           height="315"
           [src]="blog.sanitizedUrl"
           frameborder="0"
