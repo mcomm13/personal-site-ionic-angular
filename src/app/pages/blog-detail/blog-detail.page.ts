@@ -21,10 +21,10 @@ export class BlogDetailPage implements OnInit {
 
   ngOnInit() {
     const cachedBlogData = this.dataCacheService.getCachedBlogData();
-    const routeParam = this.route.snapshot.params.title;
+    const routeParam = this.route.snapshot.params.id;
     if (cachedBlogData && cachedBlogData.length) {
       this.blog = cachedBlogData.find(item => {
-        return item.title === decodeURIComponent(routeParam);
+        return item._id === decodeURIComponent(routeParam);
       });
       if (this.blog) {
         this.blog.sanitizedUrl = this.sanitizeUrl(this.blog.youtubeUrl);
@@ -34,7 +34,7 @@ export class BlogDetailPage implements OnInit {
         blogs = this.blogService.sortBlogsByDate(blogs || []);
         this.dataCacheService.cacheBlogData(blogs);
         this.blog = blogs.find(item => {
-          return item.title === decodeURIComponent(routeParam);
+          return item._id === decodeURIComponent(routeParam);
         });
         if (this.blog) {
           this.blog.sanitizedUrl = this.sanitizeUrl(this.blog.youtubeUrl);
