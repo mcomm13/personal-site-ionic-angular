@@ -18,7 +18,7 @@
     </ion-card-header>
     <ion-card-content>
       <div><strong>Author: </strong>{{ blog.author }}</div>
-      <div><strong>Date: </strong>{{ blog.date | date: 'mediumDate' }}</div>
+      <div><strong>Date: </strong>{{ blog.date }}</div>
       <div class="blog-content" [innerHtml]="blog.content"></div>
       <div *ngIf="blog.sanitizedUrl" class="blog-content">
         <iframe

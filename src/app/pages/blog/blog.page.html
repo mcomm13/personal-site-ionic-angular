@@ -17,7 +17,7 @@
       <ion-card-title><a [routerLink]="['/blog', blog._id]">{{ blog.title }}</a></ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <div>Written on {{ blog.date | date: 'mediumDate' }} by {{ blog.author }}</div>
+      <div>Written on {{ blog.date }} by {{ blog.author }}</div>
     </ion-card-content>
   </ion-card>
 </ion-content>
