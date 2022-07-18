@@ -13,6 +13,12 @@ export class WebAppsPage implements OnInit {
   ngOnInit() {
     this.webApps = [
       {
+        name: 'Words Against The Clock',
+        description:
+          'An original word game.  Given an assortment of random letters, score points by buidling words.  See how many points you can score within a 2-minute round.',
+        url: 'https://wordsagainsttheclock.com',
+      },
+      {
         name: 'Leave To Chance',
         description: `When you find yourself having to make a decision between multiple options, and you would prefer to just leave that decision to chance, this app is for you.  Simply enter in the number of possible options that you are choosing between, and this app will randomly pick an option for you.`,
         url: 'https://leave-to-chance.web.app',
